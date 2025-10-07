@@ -1,0 +1,31 @@
+/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Some weights of DeiTForImageClassificationWithTeacher were not initialized from the model checkpoint at facebook/deit-base-distilled-patch16-224 and are newly initialized because the shapes did not match:
+- cls_classifier.weight: found shape torch.Size([1000, 768]) in the checkpoint and torch.Size([13, 768]) in the model instantiated
+- cls_classifier.bias: found shape torch.Size([1000]) in the checkpoint and torch.Size([13]) in the model instantiated
+- distillation_classifier.weight: found shape torch.Size([1000, 768]) in the checkpoint and torch.Size([13, 768]) in the model instantiated
+- distillation_classifier.bias: found shape torch.Size([1000]) in the checkpoint and torch.Size([13]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loaded: (145, 145, 200) (145, 145)
+Coords total=289 train=145 val=144
+Tiles pre-filter: train=116 val=121
+After rarity filter:
+  train: {3: 9, 12: 9, 15: 3, 11: 26, 2: 15, 14: 18, 10: 8, 8: 7, 4: 2, 6: 9, 5: 7, 1: 1, 13: 2}
+  val  : {3: 7, 12: 8, 15: 3, 11: 25, 14: 21, 2: 16, 10: 9, 4: 3, 8: 6, 6: 11, 5: 8, 13: 2}
+Model label map: {'1': 0, '2': 1, '3': 2, '4': 3, '5': 4, '6': 5, '8': 6, '10': 7, '11': 8, '12': 9, '13': 10, '14': 11, '15': 12}
+  0%|          | 0/435 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/pkadukar/furi-hsi/jobs/run_deit_t32s16_weighted_es.py", line 224, in <module>
+    trainer.train()
+  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 4020, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+  File "/home/pkadukar/furi-hsi/jobs/run_deit_t32s16_weighted_es.py", line 177, in compute_loss
+    return super().compute_loss(model, inputs, return_outputs=return_outputs, **kwargs)
+  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 4142, in compute_loss
+    raise ValueError(
+ValueError: The model did not return a loss from the inputs, only the following keys: logits,cls_logits,distillation_logits. For reference, the inputs it received are pixel_values.
+  0%|          | 0/435 [00:05<?, ?it/s]

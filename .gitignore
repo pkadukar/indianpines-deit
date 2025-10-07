@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.env
+.venv
+
+# Large training artifacts
+outputs/
+*.pt
+*.pth
+*.safetensors
+*.zip
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,21 @@
+/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Some weights of DeiTForImageClassificationWithTeacher were not initialized from the model checkpoint at facebook/deit-base-distilled-patch16-224 and are newly initialized because the shapes did not match:
+- cls_classifier.weight: found shape torch.Size([1000, 768]) in the checkpoint and torch.Size([13, 768]) in the model instantiated
+- cls_classifier.bias: found shape torch.Size([1000]) in the checkpoint and torch.Size([13]) in the model instantiated
+- distillation_classifier.weight: found shape torch.Size([1000, 768]) in the checkpoint and torch.Size([13, 768]) in the model instantiated
+- distillation_classifier.bias: found shape torch.Size([1000]) in the checkpoint and torch.Size([13]) in the model instantiated
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loaded: (145, 145, 200) (145, 145)
+Coords total=289 train=145 val=144
+Tiles pre-filter: train=116 val=121
+After rarity filter:
+  train: {3: 9, 12: 9, 15: 3, 11: 26, 2: 15, 14: 18, 10: 8, 8: 7, 4: 2, 6: 9, 5: 7, 1: 1, 13: 2}
+  val  : {3: 7, 12: 8, 15: 3, 11: 25, 14: 21, 2: 16, 10: 9, 4: 3, 8: 6, 6: 11, 5: 8, 13: 2}
+num_labels: 13
+Traceback (most recent call last):
+  File "/home/pkadukar/furi-hsi/jobs/run_deit_t32s16_weighted_es.py", line 317, in <module>
+    class LossTrainer(Trainer):
+  File "/home/pkadukar/furi-hsi/jobs/run_deit_t32s16_weighted_es.py", line 335, in LossTrainer
+    TrainerCls = LossTrainer
+NameError: name 'LossTrainer' is not defined

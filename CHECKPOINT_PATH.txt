@@ -1,0 +1,1 @@
+/home/pkadukar/furi-hsi/outputs/ip_deit_t32s16_weighted_es/checkpoint-435

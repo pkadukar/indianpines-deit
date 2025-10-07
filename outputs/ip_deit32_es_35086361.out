@@ -1,0 +1,4 @@
+  File "/home/pkadukar/furi-hsi/jobs/run_deit_t32s16_weighted_es.py", line 138
+    ")
+    ^
+SyntaxError: unterminated string literal (detected at line 138)
