@@ -1,23 +1,0 @@
-/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
-  warnings.warn(
-Some weights of ViTForImageClassification were not initialized from the model checkpoint at google/vit-base-patch16-224 and are newly initialized because the shapes did not match:
-- classifier.bias: found shape torch.Size([1000]) in the checkpoint and torch.Size([10]) in the model instantiated
-- classifier.weight: found shape torch.Size([1000, 768]) in the checkpoint and torch.Size([10, 768]) in the model instantiated
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Detected kernel version 4.18.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
-Loaded: (145, 145, 200) (145, 145)
-Grid coords: 289 | train coords: 145 | val coords: 144
-Tiles (pre-filter): train=108 val=106
-After rarity filter: train=103 val=101 classes=[2, 3, 5, 6, 8, 10, 11, 12, 14, 15]
-Train class counts: {3: 7, 12: 8, 15: 3, 11: 26, 2: 14, 14: 18, 10: 7, 8: 6, 6: 7, 5: 7}
-Val   class counts: {3: 7, 12: 7, 15: 3, 11: 23, 14: 17, 2: 14, 10: 7, 8: 6, 6: 10, 5: 7}
-  0%|          | 0/390 [00:00<?, ?it/s]Traceback (most recent call last):
-  File "<stdin>", line 159, in <module>
-  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 2325, in train
-    return inner_training_loop(
-  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
-    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
-  File "/home/pkadukar/miniconda3/envs/furi310/lib/python3.10/site-packages/transformers/trainer.py", line 4020, in training_step
-    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
-TypeError: WeightedTrainer.compute_loss() got an unexpected keyword argument 'num_items_in_batch'
-  0%|          | 0/390 [00:00<?, ?it/s]
