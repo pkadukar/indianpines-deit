@@ -42,3 +42,6 @@ We provide:
 
 **Dataset source:** [Indian Pines Hyperspectral Dataset (Purdue University / AVIRIS)](https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html)
 
+Generate a PCA-based RGB for the demo patch (works on headless servers too):
+```bash
+python view_tile.py data_sample/sample_tile.npy
