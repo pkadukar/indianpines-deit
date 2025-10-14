@@ -33,3 +33,12 @@ git push
 git add README.md
 git commit -m "README: add quick inference section"
 git push
+## 📁 Data Sample & Preprocessing
+This repository does **not** include the full Indian Pines dataset due to license restrictions.
+
+We provide:
+- `data_sample/sample_tile.npy` — 5×5×200 hyperspectral patch for demonstration  
+- `prepare_dataset.py` — demo script showing normalization, tiling (16×16 stride 8), and simple train/val splits  
+
+**Dataset source:** [Indian Pines Hyperspectral Dataset (Purdue University / AVIRIS)](https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html)
+
