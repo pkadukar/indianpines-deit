@@ -1,0 +1,5 @@
+- Backbone: `facebook/deit-base-distilled-patch16-224`
+- Labels: 13 (Indian Pines classes excluding 0=background)
+- Training tiles: 16×16, stride 8; majority-label assignment
+- Val accuracy (tile-level): ~0.487 on held-out tiles
+- Notes: Educational/research use. Dataset not redistributed; see README for source.
